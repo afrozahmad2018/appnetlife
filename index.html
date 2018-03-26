@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AppNet Life</title>
+<meta name="author" content="Afroz (www.afroz.in]">
+<meta name="generator" content="AFROZ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="start/jquery-ui.min.css" rel="stylesheet">
+<link href="home.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="jquery.ui.effect-bars.min.js"></script>
+<script src="wb.slideshow.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#SlideShow1").slideshow(
+   {
+      interval: 12000,
+      type: 'sequence',
+      effect: 'bars',
+      direction: 'curtain',
+      count: 8,
+      pagination: false,
+      effectlength: 7000
+   });
+   $("#jQueryButton1").button();
+});
+</script>
+</head>
+<body>
+<div id="wb_Who_We_Are">
+<span style="color:#404040;font-family:Arial;font-size:32px;">Who We Are</span></div>
+<div id="wb_letus-text">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Let us introduce ourself in a better way...</span></div>
+<div id="wb_company-text-1">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Founded in 1999, FusionSpark Media is a talent network of individuals with backgrounds in marketing, public relations, digital media and journalism.<br><br>We are strategists, communications professionals, photographers, filmmakers, writers and producers. Our offices are in Langley, WA (north of Seattle), Medford, NJ (east of Philadelphia), Florida and Nagoya, Japan.<br><br>Our roots run deep in the development of results-driven, purpose-focused non-fiction storytelling and marketing communications that inspires and informs people about products, services and causes and influences them to take actions.<br><br>Our roots run deep in the development of results-driven, purpose-focused non-fiction storytelling and marketing communications</span></div>
+<div id="wb_CssMenu1">
+<ul>
+<li class="firstmain"><a href="#" target="_self">Item&nbsp;1</a>
+</li>
+</ul>
+</div>
+<div id="wb_CssMenu2">
+<ul>
+<li class="firstmain"><a href="#" target="_self">Item&nbsp;1</a>
+</li>
+</ul>
+</div>
+<div id="wb_CssMenu3">
+<ul>
+<li class="firstmain"><a href="#" target="_self">Item&nbsp;1</a>
+</li>
+</ul>
+</div>
+<div id="wb_date-block-d">
+<div id="basicdate"></div>
+<script>
+   var now = new Date();
+   var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+   var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+   var date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+   var year = (now.getYear() < 1000) ? now.getYear() + 1900 : now.getYear();
+   today = days[now.getDay()] + ", " + months[now.getMonth()] + " " + date + ", " + year;
+   var basicdate = document.getElementById('basicdate');
+   basicdate.innerHTML = today;
+</script>
+
+
+</div>
+<div id="wb_bookmark-d">
+<script>
+function urlEncode(text) 
+{
+   return text.replace(/\s/g, '%20').replace('+', '%2B').replace('/%20/g', '+').replace('*', '%2A').replace('/', '%2F').replace('@', '%40');
+}
+var title = urlEncode("AppNet");
+var description = urlEncode("The most awesome web and mobile app generator in the world...");
+var url = urlEncode("http://appnet.afroz.in");
+var buttons = "blogger,facebook,google,linkedin,myspace,reddit,tumblr,twitter,yahoo";
+var socialnetworks = Array();
+socialnetworks['bitly'] = "https://bit.ly/?url="+url;
+socialnetworks['blogger'] = "https://www.blogger.com/blog_this.pyra?u="+url+"&n="+title;
+socialnetworks['blogmarks'] = "https://blogmarks.net/my/new.php?mini=1&url="+url+"&title="+title;
+socialnetworks['buzz'] = "https://www.google.com/reader/link?url="+url+"&title="+title+"&snippet="+description+"&srcURL="+url+"&srcTitle="+title;
+socialnetworks['delicious'] = "https://del.icio.us/post?url="+url+"&title="+title;
+socialnetworks['digg'] = "https://digg.com/submit?phase=2&url="+url+"&title="+title;
+socialnetworks['diigo'] = "https://www.diigo.com/post?url="+url+"&title="+title;
+socialnetworks['dzone'] = "https://www.dzone.com/links/add.html?url="+url+"&title="+title;
+socialnetworks['facebook'] = "https://www.facebook.com/share.php?u="+url;
+socialnetworks['google'] = "https://www.google.com/bookmarks/mark?op=edit&bkmk="+url+"&title="+title;
+socialnetworks['linkedin'] = "https://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+title+"&summary="+description;
+socialnetworks['live'] = "https://favorites.live.com/quickadd.aspx?marklet=1&mkt=en-us&url="+url+"&title="+title;
+socialnetworks['myspace'] = "https://www.myspace.com/Modules/PostTo/Pages/?u="+url;
+socialnetworks['netvibes'] = "https://www.netvibes.com/share?url="+url+"&title="+title;
+socialnetworks['newsvine'] = "https://www.newsvine.com/_wine/save?u="+url+"&h="+title;
+socialnetworks['reddit'] = "https://reddit.com/submit?url="+url+"&title="+title;
+socialnetworks['stumbleupon'] = "https://www.stumbleupon.com/submit?url="+url+"&title="+title;
+socialnetworks['tipd'] = "https://tipd.com/submit.php?url="+url;
+socialnetworks['tumblr'] = "https://www.tumblr.com/share?v=3&u="+url+"&t="+title;
+socialnetworks['twitter'] = "https://twitter.com/?status="+title+"%20-%20"+url;
+socialnetworks['technorati'] = "https://www.technorati.com/faves?add="+url;
+socialnetworks['yahoo'] = "https://myweb2.search.yahoo.com/myresults/bookmarklet?u="+url+"&t="+title;
+		
+var arrButtons = buttons.split(",");
+for (var i=0; i<arrButtons.length; i++)
+{			
+   var name = arrButtons[i];
+   var href = socialnetworks[arrButtons[i]];
+   if (href != undefined)
+   {
+      var button = '<a target="" href="' + href + '" style="padding:2px;display:block;float:left;" title="' + name + '"><img border="0" src="' + name + '.gif" alt="' + name + '" /></a>';
+      document.write(button);
+   }
+}
+</script></div>
+<div id="wb_textscroller-d">
+<div id="text_scroller"></div>
+<script>
+var messages = new Array
+(
+   'Welcome to APPNET... The World of Web and Mobile Apps..... An innovation in the Web and Mobile era',
+   'The easiest and fastest Web And Mobile App builder  in the world.....',
+   'Please visit and share    http://appnet.afroz.in  for creating, searching and sharing web and mobile apps'
+);
+var speed = 60;
+var currentMsg = 0;
+function doScroller(text, pos, direction)
+{
+   var text_scroller = document.getElementById('text_scroller');
+   text_scroller.innerText = '[' + text.substring(0, pos) + ']';
+
+   pos += direction;
+   if (pos > text.length)
+   {
+      setTimeout('doScroller("'+text+'",'+pos+','+(-direction)+')', speed*10);
+   }
+   else
+   {
+     if (pos < 0)
+     {
+        currentMsg++;
+        if(currentMsg >= messages.length)
+          currentMsg = 0;
+        text = messages[currentMsg];
+        direction = -direction;
+     }
+     setTimeout('doScroller("'+text+'",'+pos+','+direction+')', speed);
+   }
+}
+doScroller(messages[0], 0, 1);
+</script>
+</div>
+<div id="wb_timegreeting-d">
+<div id="greeting"></div> 
+<script>
+var datenow = new Date(); 
+var timenow = datenow.getTime(); 
+datenow.setTime(timenow); 
+var hournow = datenow.getHours(); 
+var greeting = document.getElementById('greeting');
+if (hournow > 18)
+{ 
+   greeting.innerHTML = "Good Evening!"; 
+}
+else 
+if (hournow > 12) 
+{
+   greeting.innerHTML = "Good Afternoon!"; 
+}
+else 
+{
+   greeting.innerHTML = "Good Morning!"; 
+}
+</script></div>
+<div id="SlideShow1">
+<img class="image" src="images/mainslider-1.PNG" alt="" title="">
+<img class="image" src="images/mainslider-2.PNG" style="display:none;" alt="" title="">
+</div>
+<div id="wb_Image1">
+<img src="images/android-image.png" id="Image1" alt=""></div>
+<div id="wb_Image2">
+<img src="images/getitongoogleplay.png" id="Image2" alt=""></div>
+<div id="Html1">
+<a class="twitter-timeline" data-width="300" data-height="500" href="https://twitter.com/AfrozAhmad2015?ref_src=twsrc%5Etfw">Tweets by AfrozAhmad2015</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div>
+<div id="wb_website-name-d">
+<img src="images/applogofinal.PNG" id="website-name-d" alt=""></div>
+<div id="wb_logo-d">
+<img src="images/single-logo.jpg" id="logo-d" alt=""></div>
+<button type="button" id="jQueryButton1" name="" value="Button">Button</button>
+<div style="z-index:17">
+<marquee id="breakingnews" onMouseover="this.scrollAmount=1" onMouseout="this.scrollAmount=4">
+<span style="color:#4F4F4F;font-size:12px;font-family:Arial;font-weight:normal;font-style:normal;text-decoration:none">Create your App.... Share your App with the world and Search for any App you need or like...           AppNet  is 3 in one :  (1) App Creator   (2) App Search Engine   (3) Web and Mobile Social Network....</span>
+</marquee>
+<script>
+function initBreakingNews()
+{
+   var docWidth = 800;
+
+   if (typeof window.innerWidth != 'undefined')
+   {
+      docWidth = window.innerWidth;
+   }
+   else 
+   if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0)
+   {
+      docWidth = document.documentElement.clientWidth;
+   }
+   else
+   {
+      docWidth = document.getElementsByTagName('body')[0].clientWidth;
+   }
+   document.getElementById("breakingnews").style.width = docWidth.toString() + "px";
+   document.getElementById("breakingnews").scrollAmount = 4;
+   document.getElementById("breakingnews").scrollDelay = 20;
+   document.getElementById("breakingnews").loop = -1;
+}
+if (document.getElementById)
+{
+   window.onload = initBreakingNews;
+   window.onresize = initBreakingNews;
+}
+</script>
+</div>
+</body>
+</html>
